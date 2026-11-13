@@ -1,0 +1,8 @@
+<resources>
+    <color name="green">#25D366</color>
+    <color name="green_dark">#128C7E</color>
+    <color name="bubble_out">#005C4B</color>
+    <color name="bubble_in">#202C33</color>
+    <color name="bg_dark">#1F2C34</color>
+    <color name="dim_text">#9BB8A5</color>
+</resources>

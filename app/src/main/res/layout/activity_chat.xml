@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:background="@color/bubble_in" android:padding="10dp">
+        <ImageButton android:id="@+id/back" android:layout_width="40dp" android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_media_previous" android:contentDescription="Back"/>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="#8AB4F8"/>
+        </LinearLayout>
+        <ImageButton android:id="@+id/more" android:layout_width="40dp" android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_more" android:contentDescription="More"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/messages"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <TextView android:id="@+id/reply_bar" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/bubble_in" android:padding="6dp" android:textSize="13sp"
+        android:singleLine="true" android:ellipsize="end" android:visibility="gone"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="4dp" android:gravity="center_vertical" android:background="@color/bubble_in">
+        <ImageButton android:id="@+id/attach" android:layout_width="44dp" android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_photo" android:contentDescription="Photo"/>
+        <ImageButton android:id="@+id/mic" android:layout_width="44dp" android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_mic" android:contentDescription="Voice note"/>
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/input"
+            android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:hint="Message" android:maxLines="4" android:inputType="textMultiLine"/>
+        <ImageButton android:id="@+id/send" android:layout_width="48dp" android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_send" android:contentDescription="Send"/>
+    </LinearLayout>
+</LinearLayout>

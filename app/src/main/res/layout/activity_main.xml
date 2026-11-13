@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+        <TextView android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="16dp" android:paddingBottom="8dp"
+            android:text="JayChat" android:textSize="21sp" android:textStyle="bold" android:textColor="#FFFFFF"
+            android:background="#075E54"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal"
+            android:background="#075E54">
+            <LinearLayout android:id="@+id/tab_chats" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tab_chats_text" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CHATS" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+                <View android:id="@+id/ind_chats" android:layout_width="match_parent" android:layout_height="3dp"
+                    android:layout_marginTop="4dp" android:background="#FFFFFF"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tab_status" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tab_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="STATUS" android:textSize="14sp" android:textStyle="bold" android:textColor="#9BB8A5"/>
+                <View android:id="@+id/ind_status" android:layout_width="match_parent" android:layout_height="3dp"
+                    android:layout_marginTop="4dp" android:background="#00000000"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/tab_calls" android:layout_width="0dp" android:layout_height="match_parent"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tab_calls_text" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="CALLS" android:textSize="14sp" android:textStyle="bold" android:textColor="#9BB8A5"/>
+                <View android:id="@+id/ind_calls" android:layout_width="match_parent" android:layout_height="3dp"
+                    android:layout_marginTop="4dp" android:background="#00000000"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/container" android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/chats"
+                android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/status_list"
+                android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+            <TextView android:id="@+id/calls_placeholder"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:text="Calls are coming soon.\nVoice and video calls will land in a future update."
+                android:textSize="15sp" android:padding="32dp" android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add" android:contentDescription="New chat"
+        app:tint="@android:color/white" app:backgroundTint="#25D366"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

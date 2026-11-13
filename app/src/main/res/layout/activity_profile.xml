@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp" android:gravity="center_vertical">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Pick your @username" android:textSize="26sp" android:textStyle="bold"/>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:hint="username (a-z, 0-9, _)">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:maxLength="20"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Display name">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/display_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:maxLength="30"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button android:id="@+id/btn_save" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Start chatting"/>
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:textColor="#FF6B6B"/>
+</LinearLayout>
